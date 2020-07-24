@@ -1,7 +1,7 @@
 # Files_browser
 ## Local Files browser project
 
-### Browser functions:
+### Browser features:
 ##### - Login
 ##### - Logout
 ##### - Browse directories

@@ -97,7 +97,7 @@ if (isset($_FILES['fileUpload'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Browser</title>
+    <title>Files Browser</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -107,7 +107,7 @@ if (isset($_FILES['fileUpload'])) {
     <?php
     #LOGIN BOX
     if (!$_SESSION['logged_in'] == true) {
-        print('<h1>Welcome to local File Browser</h1>
+        print('<h1>Welcome to local Files Browser</h1>
         <br>
         <h6>Please Enter username and password:</h6>');
         print('<form class="login-form" action = "" method = "post">');
@@ -169,7 +169,7 @@ if (isset($_FILES['fileUpload'])) {
                             : print('?' . implode('/', $back) . '/');
                         ?>">Back</a>
         </button>
-        <form class="newDir form-group" action="/File_browser" method="get">
+        <form class="newDir form-group" action="/Files_browser" method="get">
             <input class="form-control" type="hidden" name="path" value="<?php print($_GET['path']) ?>" />
             <input class="form-control" placeholder="Name of new directory" type="text" id="new_dir" name="new_dir">
             <button class="btn btn-success" type=" submit">Create</button>

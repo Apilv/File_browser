@@ -122,7 +122,7 @@ if (isset($_FILES['fileUpload'])) {
     print('<h6 class="logout">Click here to <a href="index.php?action=logout"> Logout.</a></h6>');
 
     #DISPLAY DIRECTORY PATH
-    print('<h3 class="displayPath">Content of Directory: ' . str_replace('?path=/', '/', $_SERVER['REQUEST_URI']) . '</h3>');
+    print('<h3 class="displayPath">Content of Directory: ' . str_replace('?path=/', '', $_SERVER['REQUEST_URI']) . '</h3>');
 
     #FILE SCAN  && FILE PATH
     $path = './' . $_GET["path"];

@@ -122,7 +122,7 @@ if (isset($_FILES['fileUpload'])) {
     print('<h6 class="logout">Click here to <a href="index.php?action=logout"> Logout.</a></h6>');
 
     #DISPLAY DIRECTORY PATH
-    print('<h3 class="displayPath">Content of Directory: ' . str_replace('?path=/', '', $_SERVER['REQUEST_URI']) . '</h3>');
+    print('<h3 class="displayPath">Content of Directory: ' . str_replace('?path=/', '/', $_SERVER['REQUEST_URI']) . '</h3>');
 
     #FILE SCAN  && FILE PATH
     $path = './' . $_GET["path"];
@@ -169,7 +169,7 @@ if (isset($_FILES['fileUpload'])) {
                             : print('?' . implode('/', $back) . '/');
                         ?>">Back</a>
         </button>
-        <form class="newDir form-group" action="/Files_browser" method="get">
+        <form class="newDir form-group" action="<?php $path ?>" method="get">
             <input class="form-control" type="hidden" name="path" value="<?php print($_GET['path']) ?>" />
             <input class="form-control" placeholder="Name of new directory" type="text" id="new_dir" name="new_dir">
             <button class="btn btn-success" type=" submit">Create</button>

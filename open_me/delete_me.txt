@@ -1,0 +1,1 @@
+Path to download: ./open_me/delete_me.txt

@@ -47,7 +47,7 @@ if (isset($_POST['delete'])) {
 
 #DOWNLOAD FILE
 if (isset($_POST['download'])) {
-    print('Path to download: ' . './' . $_GET["path"] . $_POST['download']);
+    print('Path to download: ' . str_replace('?path=/', '', $_SERVER['REQUEST_URI']) . $_POST['download'] . ' ----------> ' . "File has been successfully downloaded.");
     $file = './' . $_GET["path"] . $_POST['download'];
     $file_download = str_replace("&nbsp;", " ", htmlentities($file, null, 'utf-8'));
 
